@@ -1,0 +1,112 @@
+                              GIT COMMANDS
+
+Origin - git@github.paypal.com:munikumar/bizsignupnodeweb.git
+Upstream -git@github.paypal.com:Customers-R/bizsignupnodeweb.git
+
+git branch
+To check how many branches in your repo
+
+git checkout branchName
+To jump in a given branch
+
+git checkout -b UT-testing  
+Make the branch and checkout with one command
+
+git remote add KP git@github.paypal.com:kamurali/bizsignupnodeweb.git 
+Adding the repo in local this repo take from git from the code section
+
+git remote -v 
+List of the repo whatever you added
+
+git fetch KP  
+We gave the name KP for above repo so fetch the changes of that repo using the same name whatever you used during adding the repo
+
+git pull KP fatca-tin-changes-bkup(remote branch name from there fork)
+Pull the changes of the KP repo from the given branch
+
+Git remote add upstream git@github.paypal.com:Customers-R/adroitcommonFT.git
+Git pull upstream develop
+We also need to upstream the develop branch to take the latest pull
+
+
+
+Ticket Info:
+https://engineering.paypalcorp.com/jira/browse/DTIFX-1225
+Syncup PR from feat to develop #6105
+
+
+
+git push origin adroit-eu-kyc
+To push your local branch into your remote repo
+ 
+git stash
+For removing changes
+
+Remove commit from Remote
+git reset --hard HEAD~3
+This is use to remove local last three commit
+Delete last remote commit
+git push origin +HEAD
+
+
+git push --force
+This will remove remote last three commit after above command
+
+Git reset —hard remote remoteName/branchname
+
+git reset --hard upstream/occupation_list 
+
+
+retest this please
+It should be on comments in below of the PR For retest the build 
+
+
+Your fork should be same with customer R
+git checkout develop
+git pull upstream develop
+git push origin develop -f
+
+
+git commit —amend
+If you commit anything previously and you also change something and you want add that things into previous commit this command can be used
+
+Git reset —hard or —soft <commit_id>
+Delete particular commit
+
+Git show <commit_id>
+to show changes of that commit
+
+                                           Stash
+
+Git stash list
+To list down the stash things
+
+Git stash apply <id of stash that you will get using git stash list>
+To get back all file changes you stashed
+
+Git stash branch <branch_name>
+Whatever you stashed in any branch you can get back those stash from that branch to another.
+
+
+Git stash drop <id of stash that you will get using git stash list>
+Delete or drop the stash
+
+Git log —oneline —graph
+
+git reset HEAD^ # remove commit locally
+git push origin +HEAD # force-push the new HEAD commit
+
+
+ user can read out the things onEvery keyPress
+
+
+
+npm update f0-components kepler 
+
+git reset --soft c17304020deb759bf6dd730c3c82c984f7e8c74d  delete all the commits below except given commit
+
+Push changes in our branch
+git push origin accessibility-issue -f
+
+8865039238
+ sinon.assert.calledWith(req.log, 'info', 'UCP-CONFIG');
