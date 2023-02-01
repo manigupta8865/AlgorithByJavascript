@@ -164,3 +164,52 @@ console.log(isSubsequence("gupta","manigumapnita"))
 let s1="amnbnd"
 let s2=s1.slice();
 console.log(s1===s2)
+
+
+/*O(N^2) algorithm not good for performance of 
+the application because we are running nested looping and deepened of parent array*/
+function same1(arr1,arr2){ 
+    if(arr1.length != arr2.length) 
+    { 
+        return false 
+    } 
+    for(let i=0;i<arr1.length;i++){ 
+        let findIndex = arr2.indexOf(arr1[i] ** 2) 
+        if(findIndex === -1 ){ 
+            return false 
+        } 
+        else{ 
+            arr2.splice(findIndex,0) 
+        } 
+    } 
+    return true 
+} 
+let arr1=[2,1,3,2,1] 
+let arr2=[4,1,1,9,4] 
+console.log(same1(arr1,arr2)) 
+
+
+
+//The good way of solving this problem is O(N) algorithm
+function same2(){ 
+    let arr3=[2,1,3,2,1] 
+    let arr4=[4,1,1,9,4] 
+    let frequencyCounter1={}; 
+    let frequencyCounter2={}; 
+    for(let value of arr3){ 
+        frequencyCounter1[value]=(frequencyCounter1[value] || 0) +1; 
+    } 
+    for(let value of arr4){ 
+        frequencyCounter2[value]=(frequencyCounter2[value] || 0) +1; 
+    } 
+    console.log(frequencyCounter1) // { '1': 2, '2': 2, '3': 1 } 
+    console.log(frequencyCounter2) // { '1': 2, '4': 2, '9': 1 } 
+     
+    for(key in frequencyCounter1){ 
+        if(!(key ** 2 in frequencyCounter2) || frequencyCounter1[key] !== frequencyCounter2[key ** 2]){ 
+            return false 
+        } 
+    } 
+    return true 
+} 
+console.log(same2());
